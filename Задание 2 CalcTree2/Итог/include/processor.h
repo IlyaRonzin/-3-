@@ -29,6 +29,6 @@ using namespace std;
  * @note Uses standard namespace for string and exception handling
  */
 
-Node* processExpressionFile(const string& filename);
+Node* ProcessExpressionFile(const string& filename);
 
 #endif // PROCESSOR_H

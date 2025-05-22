@@ -55,7 +55,7 @@ public:
      * @return Константная ссылка на вектор найденных маршрутов
      * @note Результаты автоматически сортируются лексикографически
      */
-    const vector<Route>& find_routes();
+    const vector<Route>& FindRoutes();
 
 private:
     /**

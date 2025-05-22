@@ -2,7 +2,7 @@
 
 Graph::Graph(size_t size) : adjacency_matrix(size, vector<bool>(size)) {}
 
-void Graph::load_from_stream(istream& in) {
+void Graph::LoadFromStream(istream& in) {
     for (auto& row : adjacency_matrix) {
         for (size_t j = 0; j < row.size(); ++j) {
             int value;

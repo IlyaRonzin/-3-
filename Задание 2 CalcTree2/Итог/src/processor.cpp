@@ -2,8 +2,8 @@
 #include "include/parser.h"
 #include "include/transformer.h"
 
-Node* processExpressionFile(const string& filename) {
-    auto tokens = Parser::readTokens(filename);
-    Node* root = Parser::buildExpressionTree(tokens);
-    return Transformer::replaceAddition(root);
+Node* ProcessExpressionFile(const string& filename) {
+    auto tokens = Parser::ReadTokens(filename);
+    Node* root = Parser::BuildExpressionTree(tokens);
+    return Transformer::ReplaceAddition(root);
 }

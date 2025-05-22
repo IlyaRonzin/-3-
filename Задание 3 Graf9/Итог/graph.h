@@ -36,7 +36,7 @@ public:
      * @throw std::runtime_error При ошибках формата данных
      * @details Формат данных: последовательность 0 и 1, разделённых пробелами
      */
-    void load_from_stream(istream& in);
+    void LoadFromStream(istream& in);
 
     /**
      * @brief Доступ к строке матрицы смежности

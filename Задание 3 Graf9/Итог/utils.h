@@ -22,6 +22,6 @@
   * -  орректность номеров начального/конечного города
   * - Ќедопустимость отрицательного числа пересадок
   */
-void validate_input(int cities, int start, int end, int transfers);
+void ValidateInput(int cities, int start, int end, int transfers);
 
 #endif // UTILS_H

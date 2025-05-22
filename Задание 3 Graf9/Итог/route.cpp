@@ -3,7 +3,7 @@
 RouteFinder::RouteFinder(const Graph& graph, int start, int end, int max_transfers)
     : graph(graph), start(start - 1), end(end - 1), max_transfers(max_transfers) {}
 
-const vector<Route>& RouteFinder::find_routes() {
+const vector<Route>& RouteFinder::FindRoutes() {
     vector<int> path;
     path.reserve(max_transfers + 1);
     path.push_back(start + 1); // Храним 1-based

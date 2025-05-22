@@ -6,7 +6,7 @@ int main() {
         string filename;
         cin >> filename;
 
-        Node* result = processExpressionFile(filename);
+        Node* result = ProcessExpressionFile(filename);
         cout << "\nProcessing result:\n"
             << "Root address: " << result << "\n"
             << "Root value: " << result->value << endl;

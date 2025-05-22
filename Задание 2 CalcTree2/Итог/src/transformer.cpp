@@ -4,7 +4,7 @@ using namespace std;
 
 namespace Transformer {
     namespace {
-        int evaluateSubtree(Node* node) {
+        int EvaluateSubtree(Node* node) {
             if (!node) {
                 cerr << "Null node in evaluation" << endl;
                 exit(EXIT_FAILURE);
@@ -23,8 +23,8 @@ namespace Transformer {
                 exit(EXIT_FAILURE);
             }
 
-            int left = evaluateSubtree(node->left);
-            int right = evaluateSubtree(node->right);
+            int left = EvaluateSubtree(node->left);
+            int right = EvaluateSubtree(node->right);
 
             switch (node->value) {
             case -1: return left + right;
@@ -43,14 +43,14 @@ namespace Transformer {
         }
     }
 
-    Node* replaceAddition(Node* root) {
+    Node* ReplaceAddition(Node* root) {
         if (!root) return nullptr;
 
-        root->left = replaceAddition(root->left);
-        root->right = replaceAddition(root->right);
+        root->left = ReplaceAddition(root->left);
+        root->right = ReplaceAddition(root->right);
 
         if (root->value == -1) {
-            int result = evaluateSubtree(root);
+            int result = EvaluateSubtree(root);
             delete root->left;
             delete root->right;
             return new Node(result);

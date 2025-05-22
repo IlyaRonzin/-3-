@@ -16,16 +16,16 @@ int main(int argc, char* argv[]) {
 
         int n, K1, K2, L;
         in >> n;
-        validate_input(n, 1, 1, 0);
+        ValidateInput(n, 1, 1, 0);
 
         Graph graph(n);
         graph.load_from_stream(in);
 
         in >> K1 >> K2 >> L;
-        validate_input(n, K1, K2, L);
+        ValidateInput(n, K1, K2, L);
 
         RouteFinder finder(graph, K1, K2, L + 1);
-        const auto& routes = finder.find_routes();
+        const auto& routes = finder.FindRoutes();
 
         if (routes.empty()) {
             out << -1;

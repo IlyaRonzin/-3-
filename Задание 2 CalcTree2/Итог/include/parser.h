@@ -37,7 +37,7 @@ namespace Parser {
      * vector<string> tokens = Parser::readTokens("input.txt");
      * @endcode
      */
-    vector<string> readTokens(const string& filename);
+    vector<string> ReadTokens(const string& filename);
 
     /**
      * @brief Builds a binary expression tree from postfix tokens
@@ -49,7 +49,7 @@ namespace Parser {
      * Uses a stack-based approach where operands create leaf nodes,
      * and operators combine the top 2 nodes from the stack
      */
-    Node* buildExpressionTree(const vector<string>& tokens);
+    Node* BuildExpressionTree(const vector<string>& tokens);
 }
 
 #endif // PARSER_H

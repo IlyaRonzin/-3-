@@ -34,7 +34,7 @@ namespace Transformer {
      * @warning The original tree may be modified. Caller should assume ownership
      * of the returned tree structure.
      */
-    Node* replaceAddition(Node* root);
+    Node* ReplaceAddition(Node* root);
 }
 
 #endif // TRANSFORMER_H

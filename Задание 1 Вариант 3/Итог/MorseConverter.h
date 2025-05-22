@@ -29,7 +29,7 @@ private:
     /**
      * @brief Инициализирует карту morseMap русскими символами и их кодами Морзе.
      */
-    void initializeMap();
+    void InitializeMap();
 
 public:
     /**
@@ -52,7 +52,7 @@ public:
      * @warning При обнаружении неподдерживаемого символа выводит ошибку в cerr и возвращает пустую строку.
      * @warning Пустая входная строка также вызывает ошибку через cerr.
      */
-    string convertToMorse(const string& text);
+    string ConvertToMorse(const string& text);
 };
 
 #endif // MORSECONVERTER_H

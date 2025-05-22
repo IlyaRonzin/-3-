@@ -4,7 +4,7 @@ using namespace std;
 
 namespace Parser {
     namespace {
-        int getOpCode(const string& op) {
+        int GetOpCode(const string& op) {
             if (op == "+") return -1;
             if (op == "-") return -2;
             if (op == "*") return -3;
@@ -14,7 +14,7 @@ namespace Parser {
         }
     }
 
-    vector<string> readTokens(const string& filename) {
+    vector<string> ReadTokens(const string& filename) {
         ifstream file(filename);
         if (!file.is_open()) {
             cerr << "Failed to open file: " << filename << endl;
@@ -33,7 +33,7 @@ namespace Parser {
         return tokens;
     }
 
-    Node* buildExpressionTree(const vector<string>& tokens) {
+    Node* BuildExpressionTree(const vector<string>& tokens) {
         stack<Node*> stack;
 
         for (const auto& token : tokens) {
@@ -64,7 +64,7 @@ namespace Parser {
                 Node* left = stack.top();
                 stack.pop();
 
-                Node* opNode = new Node(getOpCode(token));
+                Node* opNode = new Node(GetOpCode(token));
                 opNode->left = left;
                 opNode->right = right;
                 stack.push(opNode);

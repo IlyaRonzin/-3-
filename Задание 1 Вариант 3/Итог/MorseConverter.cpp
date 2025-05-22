@@ -6,7 +6,7 @@ class MorseConverter {
 private:
     map<char, string> morseMap;
 
-    void initializeMap() {
+    void InitializeMap() {
         // Русские символы
         morseMap['А'] = ".-";
         morseMap['Б'] = "-...";
@@ -44,11 +44,11 @@ private:
 
 public:
     MorseConverter() {
-        initializeMap();
+        InitializeMap();
         setlocale(LC_ALL, "Russian");
     }
 
-    string convertToMorse(const string& text) {
+    string ConvertToMorse(const string& text) {
         if (text.empty()) {
             cerr << "Ошибка: Входная строка не может быть пустой" << endl;
             return "";
